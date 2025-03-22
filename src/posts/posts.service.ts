@@ -38,13 +38,13 @@ export class PostsService {
   async findOne(id: number): Promise<Post> {
     const post = await this.postsRepository.findOne({
       where: { id },
-      // relations: ['user'],
-      // select: {
-      //   user: {
-      //     id: true,
-      //     name: true,
-      //   },
-      // },
+      relations: ['user'],
+      select: {
+        user: {
+          id: true,
+          name: true,
+        },
+      },
     });
 
     if (!post) {
