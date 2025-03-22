@@ -5,7 +5,7 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
-  ManyToMany,
+  ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -43,7 +43,7 @@ export class Post {
     type: () => User,
     description: 'The user who created the post',
   })
-  @ManyToMany(() => User, (user) => user.posts, {
+  @ManyToOne(() => User, (user) => user.posts, {
     onDelete: 'CASCADE',
   })
   @JoinColumn({
