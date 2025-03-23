@@ -17,6 +17,14 @@ Packages used:
 - class-transformer
 - @nestjs/mapped-types
 
+Environment Variables
+```
+DB_URL="..."
+JWT_SECRET=your_secret_key
+```
+
+> Open API Specification at http://localhost:3000/api 
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
